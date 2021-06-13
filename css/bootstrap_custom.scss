@@ -1,0 +1,387 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// Container Specifications
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1080px,
+    xxl: 1140px
+);
+
+// Main Colors
+$primary: #f28f32;
+$dark: #4f4f4f;
+
+// Custom Border Specifications
+$border-color: #C9C9C9;
+$border-radius-sm: 0.25rem;
+$border-radius: 0.5rem;
+$border-radius-lg: 0.75rem;
+$border-radius-pill: 50rem;
+
+// Custom Spacing Specifications for margins and paddings
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5
+);
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../bootstrap/scss/root";
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/containers";
+@import "../bootstrap/scss/card";
+@import "../bootstrap/scss/type";
+@import "../bootstrap/scss/images";
+@import "../bootstrap/scss/containers";
+@import "../bootstrap/scss/grid";
+@import "../bootstrap/scss/nav";
+@import "../bootstrap/scss/navbar";
+@import "../bootstrap/scss/button-group";
+@import "../bootstrap/scss/utilities";
+@import "../bootstrap/scss/buttons";
+@import "../bootstrap/scss/transitions";
+@import "../bootstrap/scss/utilities/api";
+
+// 5. Add additional custom code here
+
+// Basic Properties
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+body .btn {
+    font-family: "Raleway", sans-serif;
+}
+
+body section {
+    margin-bottom: 8rem;
+}
+
+body p {
+    color: $dark;
+}
+
+// Buttons
+.btn-primary {
+    color: #ffffff;
+}
+
+// Headings
+h1 {
+    font-weight: 800;
+    line-height: 1;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+// Section Backgrounds
+$dotted-bg-1 : url(../Assets/Backgrounds/bg-1.svg) repeat center;
+$dotted-bg-2 : url(../Assets/Backgrounds/bg-2.svg) repeat center;
+
+
+// Section 1
+#section1 {
+    background: $dotted-bg-1;
+    background-size: contain;
+}
+
+// Section 2
+// iPhone Models
+#section2 {
+    background: $dotted-bg-1;
+    background-size: contain;
+}
+
+.iphone-model-group {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+}
+
+.iphone-model-group .iphone1 img {
+    width: 15rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    z-index: 3;
+    transform: translate(-50%, 0px);
+}
+
+.iphone-model-group .iphone2 img {
+    width: 13.5rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.iphone-model-group .iphone3 img {
+    width: 13.5rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.iphone-model-group .iphone4 img {
+    width: 12rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(160%, 0px);
+    z-index: 1;
+}
+
+.iphone-model-group .iphone5 img {
+    width: 12rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-260%, 0px);
+    z-index: 1;
+}
+
+// Section 3
+#section3 {
+    background: $dotted-bg-1;
+    background-size: contain;
+    background-position: center;
+}
+
+// Outer Card
+#section3 .outer-card {
+    width: 100%;
+    margin: 0rem auto;
+    padding: 0.5rem 3rem;
+    background: #ffffff;
+}
+
+// Inner Cards
+#section3 .card {
+    padding: 1rem 1rem;
+    position: relative;
+    min-height: 14rem;
+}
+
+#section3 .card p {
+    font-size: 1rem;
+}
+
+#section3 .card-icon {
+    left: 50%;
+    position: absolute;
+    top: -3rem;
+    background: #ffffff;
+    transform: translate(-50%, 0px);
+    padding: 1rem;
+}
+
+#section3 .card-icon img{
+    width: 4rem;
+}
+
+// Section 4
+#section4 {
+    background: $dotted-bg-2;
+    background-size: contain;
+    background-position: center;
+}
+
+// Section 4 Outer Cards
+#section4 .outer-card {
+    position: relative;
+    background: #ffffff
+}
+
+#section4 .outer-card .heading {
+    background: #ffffff;
+    position: absolute;
+    top: -1.25rem;
+    left: 0.5rem;
+    padding: 0rem 1.5rem 0rem 1rem;
+}
+
+// Section 5
+#section5 {
+    background: $dotted-bg-1;
+    background-size: contain;
+}
+
+// Outer Card
+#section5 .outer-card {
+    background: #ffffff;
+}
+
+// Cards 
+#section5 .card {
+    min-height: 11rem;
+}
+
+// Section 6
+#section6 {
+    background: $dotted-bg-2;
+    background-size: contain;
+}
+
+// Section 7
+#section7 {
+    background: $dotted-bg-2;
+    background-size: contain;
+    background-position: center;
+    min-height: 33rem;
+}
+
+#section7 .outer-box {
+    position: relative;
+    width: 85%;
+    min-height: 32rem;
+    margin: 1rem auto;
+}
+
+#section7 .outer-box .main-model {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    z-index: -1;
+}
+
+#section7 .outer-box .main-model img {
+    width: 15rem;
+}
+
+#section7 .outer-box .card {
+    position: absolute;
+    padding: 1rem;
+    width: 20rem;
+}
+
+#section7 .outer-box .card.card-1 {
+    right: -5rem;
+}
+
+#section7 .outer-box .card.card-2 {
+    top: 3rem;
+    left: -5rem;
+}
+
+#section7 .outer-box .card.card-3 {
+    bottom: 3rem;
+    right: -5rem;
+}
+
+#section7 .outer-box .card.card-4 {
+    bottom: 0rem;
+    left: -5rem;
+}
+
+#section7 .outer-box .card svg{
+    position: absolute;
+}
+
+#section7 .outer-box .card.card-1 svg {
+    right: 6.8rem;
+    top: 3.1rem;
+}
+
+#section7 .outer-box .card.card-2 svg {
+    left: 5.5rem;
+    top: 4.3rem;
+}
+
+#section7 .outer-box .card.card-3 svg {
+    right: 6.8rem;
+    top: 0.2rem;
+}
+
+#section7 .outer-box .card.card-4 svg {
+    left: 5.5rem;
+    top: -0.1rem;
+}
+
+#section7 .outer-box .card h4{
+    margin: 0rem 0rem 2rem 0rem;
+}
+
+#section7 .outer-box .card p{
+    font-size: 0.85rem;
+    margin: 0rem;
+}
+
+#section7 .outer-box .card img {
+    width: 3.5rem;
+}
+
+// Responsive
+
+@media only screen and (max-width: 991px) {
+    .iphone-model-group {
+        overflow-x: scroll;
+        height: 31rem;
+    }
+
+    .iphone-model-group .iphone1 img {
+        width: 15rem;
+        z-index: 3;
+    }
+    
+    .iphone-model-group .iphone2 img {
+        width: 15rem;
+        z-index: 2;
+    }
+    
+    .iphone-model-group .iphone3 img {
+        width: 15rem;
+        z-index: 1;
+    }
+    
+    .iphone-model-group .iphone4 img {
+        width: 15rem;
+        z-index: 0;
+    }
+    
+    .iphone-model-group .iphone5 img {
+        width: 15rem;
+        z-index: -1;
+    }
+
+    #section3 .outer-card {
+        background-color: transparent;
+    }
+
+    #section3 .card {
+        min-height: 10rem;
+        margin: 2rem auto;
+    }
+
+    #section5 .outer-card{
+        background: transparent;
+    }
+}
